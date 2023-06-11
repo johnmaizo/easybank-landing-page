@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+
+$P_Color_DarkBlue: hsl(233, 26%, 24%); 
+$P_Color_LimeGreen: hsl(136, 65%, 51%); 
+$P_Color_BrightCyan: hsl(192, 70%, 51%); 
+$N_Color_GrayishBlue: hsl(233, 8%, 62%);
+$N_Color_LightGrayishBlue: hsl(220, 16%, 96%);
+$N_Color_VeryLightGray: hsl(0, 0%, 98%);
+$N_Color_White: hsl(0, 0%, 100%);
+
+$fs_regular: 18px;
+$fw_300: 300;
+$fw_400: 400;
+$fw_700: 700;
+
+
+#root {
+    min-height: 100vh;
+    font-family: 'Public Sans', sans-serif;
+    font-size: $fs_regular;
+}
+
+.req_inv {
+    border: 0;
+    padding: 0.75em 2em;
+    cursor: pointer;
+    color: $N_Color_White;
+    background: linear-gradient(to right, $P_Color_LimeGreen, $P_Color_BrightCyan);
+    border-radius: 2em;
+    font-weight: $fw_700;
+
+    transition: background 500ms ease;
+    &:is(:hover, :focus) {
+        background: linear-gradient(to right, #87E2A5, $P_Color_BrightCyan);
+    }
+}
+
+// ! Header
+main {
+    h1, h2 ,h3 {
+        color: $P_Color_DarkBlue;
+    }
+    p {
+        color: $N_Color_GrayishBlue;
+    }
+
+    .hero_module {
+        background-color: #FAFAFA;
+        h1 {
+            font-weight: $fw_400;
+        }
+    }
+
+    .why_choose_module {
+        background-color: #F4F5F7;
+        h2, h3 {
+            font-weight: $fw_400;
+        }
+    }
+
+    .article_module {
+        background-color: #FAFAFA;
+        h2 {
+            font-weight: $fw_400;
+        }
+
+        h3 {
+            font-weight: $fw_400;
+            font-size: 1rem;
+            color: $N_Color_GrayishBlue;
+        }
+
+        .box {
+            border-radius: 1em;
+            overflow: hidden;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+            .text {
+                padding: 1em;
+                background-color: $N_Color_White;
+                a {
+                    color: $P_Color_DarkBlue;
+
+                    &:is(:hover,:focus) {
+                        color: $P_Color_BrightCyan;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    background-color: $P_Color_DarkBlue;
+    color: $N_Color_White;
+
+    a {
+        color: $N_Color_White;
+    }
+
+    nav:nth-child(3) a:is(:hover, :focus) {
+        color: $P_Color_LimeGreen;
+    }
+    
+    .icons {
+        a {
+            &:nth-child(2) {
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+    
+        font-size: 1.5rem;
+        i:not(.nav_youtube):is(:hover,:focus) {
+            color: $P_Color_LimeGreen;
+        }
+    
+        .nav_youtube {
+            color: $P_Color_DarkBlue;
+            background-color: $N_Color_White;
+            padding: 0.35em;
+            border-radius: 50%;
+            font-size: 0.9rem;
+    
+            &:is(:hover, :focus) {
+                background-color: $P_Color_LimeGreen;
+            }
+        }
+    }
+}
